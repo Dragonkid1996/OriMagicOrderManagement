@@ -15,4 +15,4 @@ The application will provide an interface for an origami shop owner to sell thei
 
 ## Sprint Breakdowns
 ---
-![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/ProjectImages/Project Board.PNG)
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/ProjectImages/ProjectBoard.PNG)
