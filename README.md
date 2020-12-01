@@ -16,3 +16,28 @@ The application will provide an interface for an origami shop owner to sell thei
 ## Sprint Breakdowns
 ---
 ![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoard.PNG)
+
+
+
+### Sprint 1 - Tuesday 1st December 2020
+
+By the end of this sprint I aimed to have the basis of a three-tier application, setting out the different projects within the solution. I also wanted to build the database, design the CRUD manager, and create a Graphical User Interface.
+
+#### Sprint Goals
+
+* Set out the basics of the application
+- [x] Complete User Story 0.1
+- [x] Complete User Story 0.2
+- [x] Complete User Story 0.4
+- [x] Update README
+- [x] Commit all changes to Github repository
+
+#### Sprint Review
+
+The database was completed, the GUI was design and the CRUD manager now has the core functionality it needs to build the application on top. I began adding some data to the database as well.
+
+#### Sprint Retrospective
+
+The sprint went rather smoothly, the only blocker was my computer's limitations. However, after waiting a few minutes for it to respond, I was able to get back to work.
+
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint1.PNG)
