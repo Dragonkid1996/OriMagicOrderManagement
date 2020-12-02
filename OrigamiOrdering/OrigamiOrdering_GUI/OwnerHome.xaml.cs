@@ -20,10 +20,12 @@ namespace OrigamiOrdering_GUI
     /// </summary>
     public partial class OwnerHome : Page
     {
+        CRUDManager _crudManager = new CRUDManager();
         public OwnerHome()
         {
             InitializeComponent();
             RefreshModels();
+            RefreshOrders();
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
@@ -40,13 +42,19 @@ namespace OrigamiOrdering_GUI
 
         private void RefreshModels()
         {
-            using (var db = new origamiContext())
+            var modelList = _crudManager.GetAllModels();
+            foreach (var item in modelList)
             {
-                var modelList = db.Models.ToList();
-                foreach (var item in modelList)
-                {
-                    this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Name = item.ModelName });
-                }                   
+                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Name = item.ModelName });
+            } 
+        }
+
+        private void RefreshOrders()
+        {
+            var orders = _crudManager.GetAllOrders();
+            foreach (var item in orders)
+            {
+                this.lvOrders.Items.Add(new { ID = item.OrderId, Price = item.TotalPrice, Date = item.OrderDate });
             }
         }
     }

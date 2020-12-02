@@ -46,9 +46,12 @@ namespace OrigamiOrdering
 
             modelBuilder.Entity<JtModelColour>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.IndexId)
+                    .HasName("PK__JT_Model__40BC8AA1B78DA58A");
 
                 entity.ToTable("JT_Model_Colours");
+
+                entity.Property(e => e.IndexId).HasColumnName("IndexID");
 
                 entity.Property(e => e.ColourId).HasColumnName("ColourID");
 
@@ -57,12 +60,12 @@ namespace OrigamiOrdering
                 entity.Property(e => e.PiecesOfColour).HasColumnName("Pieces_Of_Colour");
 
                 entity.HasOne(d => d.Colour)
-                    .WithMany()
+                    .WithMany(p => p.JtModelColours)
                     .HasForeignKey(d => d.ColourId)
                     .HasConstraintName("FK__JT_Model___Colou__3D5E1FD2");
 
                 entity.HasOne(d => d.Model)
-                    .WithMany()
+                    .WithMany(p => p.JtModelColours)
                     .HasForeignKey(d => d.ModelId)
                     .HasConstraintName("FK__JT_Model___Model__3C69FB99");
             });

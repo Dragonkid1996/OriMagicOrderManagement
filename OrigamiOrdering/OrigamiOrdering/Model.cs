@@ -9,6 +9,7 @@ namespace OrigamiOrdering
     {
         public Model()
         {
+            JtModelColours = new HashSet<JtModelColour>();
             Orders = new HashSet<Order>();
         }
 
@@ -20,6 +21,7 @@ namespace OrigamiOrdering
         public string LinkToTutorial { get; set; }
         public string LinkToPhoto { get; set; }
 
+        public virtual ICollection<JtModelColour> JtModelColours { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

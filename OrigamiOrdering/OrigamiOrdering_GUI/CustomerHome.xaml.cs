@@ -21,6 +21,7 @@ namespace OrigamiOrdering_GUI
     /// </summary>
     public partial class CustomerHome : Page
     {
+        CRUDManager _crudManager = new CRUDManager();
         public CustomerHome()
         {
             InitializeComponent();
@@ -35,23 +36,44 @@ namespace OrigamiOrdering_GUI
 
         private void RefreshModels()
         {
-            using (var db = new origamiContext())
+            var modelList = _crudManager.GetAllModels();
+            foreach (var item in modelList)
             {
-                var modelList = db.Models.ToList();
-                foreach (var item in modelList)
-                {
-                    this.lvModels.Items.Add(new { Photo = LoadImage(item.LinkToPhoto.ToString()), Name = item.ModelName, Price = item.ModelPrice });
-                }
+                this.lvModels.Items.Add(new { Photo = LoadImage(item.LinkToPhoto.ToString()), Names = item.ModelName, Price = item.ModelPrice });
             }
         }
 
-        private BitmapImage LoadImage(string fileName)
+        private void RefreshBasket()
         {
-            var source = new BitmapImage(new Uri(Directory.GetCurrentDirectory()+ @"..\..\..\..\..\OrigamiImages/" + fileName));
+            lbBasket.ItemsSource = null;
+            foreach (var item in _crudManager.Basket)
+            {
+                lbBasket.Items.Add(item.ModelName);
+            }
+            
+        }
+
+        public BitmapImage LoadImage(string fileName)
+        {
+            var source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + @"..\..\..\..\..\OrigamiImages/" + fileName));
             source.DecodePixelHeight = 100;
             source.DecodePixelWidth = 100;
 
             return source;
+        }
+
+        private void lvModels_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var chosen = sender as ListBox;
+            var modelChosen = chosen.SelectedItem.ToString();
+            var model = _crudManager.GetModelFromName(modelChosen);
+            _crudManager.Basket.Add(model);
+            RefreshBasket();
+        }
+
+        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            _crudManager.CreateOrder(_crudManager.Basket, Int32.Parse(lblPrice.Content.ToString()));
         }
     }
 }

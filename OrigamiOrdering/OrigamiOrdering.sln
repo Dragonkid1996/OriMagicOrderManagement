@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering", "OrigamiOrdering\OrigamiOrdering.csproj", "{E13061EA-45DA-4663-80B4-40C44AE09710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrigamiOrdering_GUI", "OrigamiOrdering_GUI\OrigamiOrdering_GUI.csproj", "{766402B7-51A6-4828-93DF-7D0AF3855E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering_GUI", "OrigamiOrdering_GUI\OrigamiOrdering_GUI.csproj", "{766402B7-51A6-4828-93DF-7D0AF3855E4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrigamiOrdering_Business", "OrigamiOrdering_Business\OrigamiOrdering_Business.csproj", "{97BE57C1-1673-4CF1-BE67-12BDC5334776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering_Business", "OrigamiOrdering_Business\OrigamiOrdering_Business.csproj", "{97BE57C1-1673-4CF1-BE67-12BDC5334776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrigamiOrdering_TEST", "OrigamiOrdering_TEST\OrigamiOrdering_TEST.csproj", "{5B586C56-3852-477E-BDEE-62091420FB97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering_TEST", "OrigamiOrdering_TEST\OrigamiOrdering_TEST.csproj", "{5B586C56-3852-477E-BDEE-62091420FB97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering", "OrigamiOrdering\OrigamiOrdering.csproj", "{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E13061EA-45DA-4663-80B4-40C44AE09710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E13061EA-45DA-4663-80B4-40C44AE09710}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E13061EA-45DA-4663-80B4-40C44AE09710}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E13061EA-45DA-4663-80B4-40C44AE09710}.Release|Any CPU.Build.0 = Release|Any CPU
 		{766402B7-51A6-4828-93DF-7D0AF3855E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{766402B7-51A6-4828-93DF-7D0AF3855E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{766402B7-51A6-4828-93DF-7D0AF3855E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

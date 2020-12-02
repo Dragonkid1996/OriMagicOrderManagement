@@ -17,17 +17,18 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnBuy" Content="Buy" HorizontalAlignment="Center" Margin="0,83,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100"/>
+        <Button x:Name="btnBuy" Content="Buy" HorizontalAlignment="Center" Margin="0,83,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnBuy_Click"/>
         <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,166,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click"/>
-        <ListView x:Name="lvModels" Grid.Column="1" Grid.RowSpan="2">
+        <ListView x:Name="lvModels" Grid.Column="1" Grid.RowSpan="2" MouseDoubleClick="lvModels_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Photo" DisplayMemberBinding="{Binding Photo}"/>
-                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding Names}"/>
                     <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <ListBox x:Name="lbBasket" Margin="0,0,10,0"/>
+        <Label x:Name="lblPrice" Content="" HorizontalAlignment="Left" Margin="145,27,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>
