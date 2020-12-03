@@ -20,35 +20,72 @@ namespace OrigamiOrdering_GUI
     /// </summary>
     public partial class ModelDetails : Window
     {
+        CRUDManager _crudManager = new CRUDManager();
         public ModelDetails()
         {
             InitializeComponent();
-            RefreshColours();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            _crudManager.DeleteModel(tbName.Text);
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-
+            btnDelete.Visibility = Visibility.Hidden;
+            btnSubmit.Visibility = Visibility.Visible;
+            tbPrice.IsEnabled = true;
+            tbComplexity.IsEnabled = true;
+            tbPieces.IsEnabled = true;
+            tbTutorial.IsEnabled = true;
+            tbPhoto.IsEnabled = true;
         }
 
-        private void RefreshColours()
+        public void RefreshColours()
         {
-            using (var db = new origamiContext())
+            var isInt = Int32.TryParse(lblId.Content.ToString(), out int idToInt);
+            if (!isInt)
+                MessageBox.Show("Please enter an integer!");
+            else
             {
-                var selectColours =
-                    from jt in db.JtModelColours.Include(jt => jt.Colour)
-                    where jt.ModelId == Int32.Parse(lblId.Content.ToString())
-                    select new { Colour = jt.Colour, Pieces = jt.PiecesOfColour };
-                foreach (var item in selectColours)
+                using (var db = new origamiContext())
                 {
-                    lvColours.Items.Add(new { ColourName = item.Colour, PiecesNo = item.Pieces });
+                    var selectColours =
+                        from jt in db.JtModelColours.Include(jt => jt.Colour)
+                        where jt.ModelId == idToInt
+                        select new { Colour = jt.Colour.Colour1, Pieces = jt.PiecesOfColour };
+
+                    foreach (var item in selectColours)
+                    {
+                        lvColours.Items.Add(new { ColourName = item.Colour, PiecesNo = item.Pieces });
+                    }
                 }
+            }                        
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            var isDec = Decimal.TryParse(tbPrice.Text, out decimal price);
+            var isInt = Int32.TryParse(tbPieces.Text, out int pieces);
+
+            if (tbComplexity.Text == "" || tbPhoto.Text == "")
+                MessageBox.Show("Please enter a complexity and photo link!");
+            else if (!isDec)
+                MessageBox.Show("Please enter a valid price (Decimal)!");
+            else if (!isInt)
+                MessageBox.Show("Please enter a valid total number of pieces (Integer)!");
+            else
+            {
+                btnDelete.Visibility = Visibility.Visible;
+                btnSubmit.Visibility = Visibility.Hidden;
+
+                _crudManager.UpdateModel(tbName.Text, price, tbComplexity.Text,
+                                        pieces, tbTutorial.Text, tbPhoto.Text);
+                this.Close();
             }
+            
         }
     }
 }

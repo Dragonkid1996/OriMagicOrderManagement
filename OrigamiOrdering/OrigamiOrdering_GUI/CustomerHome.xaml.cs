@@ -26,10 +26,12 @@ namespace OrigamiOrdering_GUI
         {
             InitializeComponent();
             RefreshModels();
+            lblPrice.Content = "0.00";
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
+            _crudManager.Basket = null;
             OriMagicHome oriMagicHome = new OriMagicHome();
             this.NavigationService.Navigate(oriMagicHome);
         }
@@ -39,18 +41,19 @@ namespace OrigamiOrdering_GUI
             var modelList = _crudManager.GetAllModels();
             foreach (var item in modelList)
             {
-                this.lvModels.Items.Add(new { Photo = LoadImage(item.LinkToPhoto.ToString()), Names = item.ModelName, Price = item.ModelPrice });
+                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Names = item.ModelName, Price = item.ModelPrice });
             }
         }
 
         private void RefreshBasket()
         {
             lbBasket.ItemsSource = null;
+            lbBasket.Items.Clear();
             foreach (var item in _crudManager.Basket)
             {
                 lbBasket.Items.Add(item.ModelName);
             }
-            
+            lblPrice.Content = _crudManager.GetTotalPrice().ToString("F");
         }
 
         public BitmapImage LoadImage(string fileName)
@@ -64,16 +67,30 @@ namespace OrigamiOrdering_GUI
 
         private void lvModels_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var chosen = sender as ListBox;
-            var modelChosen = chosen.SelectedItem.ToString();
-            var model = _crudManager.GetModelFromName(modelChosen);
-            _crudManager.Basket.Add(model);
-            RefreshBasket();
+            try 
+            {
+                var modelChosen = lvModels.SelectedItem.ToString().Split(',');
+                var onlyModel = modelChosen[1].Split('=');
+                var modelName = onlyModel[1].Trim();
+                var model = _crudManager.GetModelFromName(modelName);
+                _crudManager.Basket.Add(model);
+                RefreshBasket();
+            }
+            catch (Exception) 
+            {
+                //Left blank intentionally, as the program won't crash on double clicking
+                //without selecting an item
+            }            
         }
 
         private void btnBuy_Click(object sender, RoutedEventArgs e)
         {
-            _crudManager.CreateOrder(_crudManager.Basket, Int32.Parse(lblPrice.Content.ToString()));
+            bool isDec = Decimal.TryParse(lblPrice.Content.ToString(), out decimal result);
+            if (isDec)
+                _crudManager.CreateOrder(_crudManager.Basket, result);
+            else
+                MessageBox.Show("Please enter a number!");
+            MessageBox.Show("Order has been placed!");
         }
     }
 }

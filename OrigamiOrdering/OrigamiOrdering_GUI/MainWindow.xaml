@@ -5,5 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrigamiOrdering_GUI"
         mc:Ignorable="d"
-        Title="OriMagic" Height="450" Width="800" Source="OriMagicHome.xaml">
+        Title="OriMagic" Height="550" Width="900" 
+        MinHeight="550" MinWidth="900"
+        MaxHeight="550" MaxWidth="900"
+        Source="OriMagicHome.xaml">
 </NavigationWindow>

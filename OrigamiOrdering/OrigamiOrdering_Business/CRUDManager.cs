@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace OrigamiOrdering
 {
@@ -38,7 +39,7 @@ namespace OrigamiOrdering
         }
 
 
-        public void CreateModel(string modelName, int modelPrice, string modelComplexity, int modelPiecesNumber,
+        public void CreateModel(string modelName, decimal modelPrice, string modelComplexity, int modelPiecesNumber,
                                 string linkToTutorial, string linkToPhoto)
         {
             using (var db = new origamiContext())
@@ -70,7 +71,7 @@ namespace OrigamiOrdering
                         ColourId = db.Colours.Where(c => c.ColourId == coloursList[i].ColourId).Select(c => c.ColourId).FirstOrDefault(),
                         PiecesOfColour = piecesOfColour[i]
                     };
-                    db.JtModelColours.Add(colourPieces);                    
+                    db.JtModelColours.Add(colourPieces);
                 }
                 db.SaveChanges();
             }
@@ -90,13 +91,12 @@ namespace OrigamiOrdering
             }
         }
 
-        public void UpdateModel(string name, string modelNameUpdate, int modelPriceUpdate, string modelComplexityUpdate, 
+        public void UpdateModel(string name, decimal modelPriceUpdate, string modelComplexityUpdate,
                                 int modelPiecesNumberUpdate, string linkToTutorialUpdate, string linkToPhotoUpdate)
         {
             using (var db = new origamiContext())
             {
                 var modelToUpdate = db.Models.Where(m => m.ModelName == name).FirstOrDefault();
-                modelToUpdate.ModelName = modelNameUpdate;
                 modelToUpdate.ModelPrice = modelPriceUpdate;
                 modelToUpdate.ModelComplexity = modelComplexityUpdate;
                 modelToUpdate.ModelPiecesNumber = modelPiecesNumberUpdate;
@@ -110,12 +110,18 @@ namespace OrigamiOrdering
         {
             using (var db = new origamiContext())
             {
+                var fullmodel = GetModelFromName(modelName);
+                var toDelete = db.JtModelColours.Where(jt => jt.ModelId == fullmodel.ModelId).ToList();
+                foreach (var item in toDelete)
+                {
+                    db.JtModelColours.Remove(item);
+                }
                 db.Models.Remove(db.Models.Where(m => m.ModelName == modelName).FirstOrDefault());
-                db.SaveChanges();
+                db.SaveChanges();                
             }
         }
 
-        public void CreateOrder(List<Model> modelList, int totalPrice)
+        public void CreateOrder(List<Model> modelList, decimal totalPrice)
         {
             using (var db = new origamiContext())
             {
@@ -124,10 +130,22 @@ namespace OrigamiOrdering
                     var newOrder = new Order
                     {
                         ModelId = item.ModelId,
-                        TotalPrice = totalPrice
+                        TotalPrice = totalPrice,
+                        OrderDate = DateTime.Now
                     };
                     db.Orders.Add(newOrder);
                 }
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteOrder(string orderId)
+        {
+            var idAsInt = Int32.Parse(orderId);
+            using (var db = new origamiContext())
+            {
+                var orderToDelete = db.Orders.Where(o => o.OrderId == idAsInt).FirstOrDefault();
+                db.Orders.Remove(orderToDelete);
                 db.SaveChanges();
             }
         }
@@ -154,6 +172,16 @@ namespace OrigamiOrdering
             {
                 return db.Models.Where(m => m.ModelName == modelName).FirstOrDefault();
             }
+        }
+
+        public decimal GetTotalPrice()
+        {
+            decimal sum = 0;
+            foreach (var item in Basket)
+            {
+                sum += item.ModelPrice;
+            }
+            return sum;
         }
     }
 }

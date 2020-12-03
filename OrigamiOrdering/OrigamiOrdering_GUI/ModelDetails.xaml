@@ -5,32 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrigamiOrdering_GUI"
         mc:Ignorable="d"
-        Title="ModelDetails" Height="450" Width="800">
+        Title="ModelDetails" Height="550" Width="900"
+        MinHeight="550" MinWidth="900"
+        MaxHeight="550" MaxWidth="900">
     <Grid>
         <Label x:Name="lblName" Content="Model Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,65,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" Text="" TextWrapping="Wrap" Margin="214,58,88,343"/>
+        <TextBox x:Name="tbName" Text="" TextWrapping="Wrap" Margin="214,58,88,424" IsEnabled="False"/>
         <Label x:Name="lblPrice" Content="Price: " HorizontalAlignment="Left" Margin="52,121,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbPrice" Text="" TextWrapping="Wrap" Margin="214,115,88,287"/>
+        <TextBox x:Name="tbPrice" Text="" TextWrapping="Wrap" Margin="214,115,88,369" IsEnabled="False"/>
         <Label x:Name="lblComplex" Content="Complexity: " HorizontalAlignment="Left" Margin="50,166,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbComplexity" Text="" TextWrapping="Wrap" Margin="214,165,88,238"/>
+        <TextBox x:Name="tbComplexity" Text="" TextWrapping="Wrap" Margin="214,165,88,324" IsEnabled="False"/>
         <Label x:Name="lblPieces" Content="Total Number of Pieces: " HorizontalAlignment="Left" Margin="50,213,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbPieces" Text="" TextWrapping="Wrap" Margin="215,210,87,193"/>
+        <TextBox x:Name="tbPieces" Text="" TextWrapping="Wrap" Margin="215,210,87,274" IsEnabled="False"/>
         <Label x:Name="lblTutorialLink" Content="Tutorial Link: " HorizontalAlignment="Left" Margin="56,318,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbTutorial" Text="" TextWrapping="Wrap" Margin="214,311,88,86"/>
+        <TextBox x:Name="tbTutorial" Text="" TextWrapping="Wrap" Margin="214,311,88,171" IsEnabled="False"/>
         <Label x:Name="lblPhotoLink" Content="Link to Photo: " HorizontalAlignment="Left" Margin="50,261,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbPhoto" Text="" TextWrapping="Wrap" Margin="214,260,88,147"/>
+        <TextBox x:Name="tbPhoto" Text="" TextWrapping="Wrap" Margin="214,260,88,223" IsEnabled="False"/>
         <Label x:Name="lblTitle" Content="Model Details" Grid.Column="1" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="647,385,0,0" VerticalAlignment="Top" Height="35" Width="99" Click="btnDelete_Click"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="526,385,0,0" VerticalAlignment="Top" Height="35" Width="98" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="647,385,0,0" VerticalAlignment="Top" Height="35" Width="99" Click="btnDelete_Click" MouseDoubleClick="btnDelete_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="526,385,0,0" VerticalAlignment="Top" Height="35" Width="98" Click="btnUpdate_Click" MouseDoubleClick="btnUpdate_Click"/>
         <Label x:Name="lblColours" Content="Colours" HorizontalAlignment="Left" Margin="73,385,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="lvColours" Margin="159,363,299,10">
+        <ListView x:Name="lvColours" Margin="159,363,432,10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Colour" DisplayMemberBinding="{Binding ColourName}"/>
+                    <GridViewColumn Header="Colour" DisplayMemberBinding="{Binding ColourName}" Width="100"/>
                     <GridViewColumn Header="Number of Pieces" DisplayMemberBinding="{Binding PiecesNo}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label x:Name="lblId" Content="ID" HorizontalAlignment="Left" Margin="687,18,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="647,385,0,0" VerticalAlignment="Top" Height="35" Width="99" Click="btnSubmit_Click" MouseDoubleClick="btnSubmit_Click" Visibility="Hidden"/>
     </Grid>
 </Window>

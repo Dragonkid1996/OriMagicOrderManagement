@@ -7,9 +7,16 @@ The application will provide an interface for an origami shop owner to sell thei
 
 ## Class Diagrams
 ---
-[image]
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OverallClassDiagram.PNG)
+
+## Entity Relationship Diagram
+
+---
+
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OrigamiDB ERD.jpg)
 
 ## WPF
+
 ---
 [image]
 
@@ -26,9 +33,9 @@ By the end of this sprint I aimed to have the basis of a three-tier application,
 #### Sprint Goals
 
 * Set out the basics of the application
-- [x] Complete User Story 0.1
-- [x] Complete User Story 0.2
-- [x] Complete User Story 0.4
+- [x] Complete User Story 0.1 - Build a Database
+- [x] Complete User Story 0.2 - Build a GUI
+- [x] Complete User Story 0.4 - Design CRUD Functionality
 - [x] Update README
 - [x] Commit all changes to Github repository
 
@@ -50,13 +57,12 @@ By the end of this sprint I aimed to have basic functionality on the GUI. I aime
 
 #### Sprint Goals
 
-## Sprint 2
 * Build GUI functionality
-- [x] Complete User Story 1.1
-- [x] Complete User Story 3.3
-- [x] Complete User Story 3.4
-- [x] Complete User Story 2.1
-- [x] Complete User Story 2.3
+- [x] Complete User Story 1.1 - Create New Models
+- [x] Complete User Story 3.3 - View a Model List (Customer) 
+- [x] Complete User Story 3.4 - Buy Button
+- [x] Complete User Story 2.1 - Order Viewing
+- [x] Complete User Story 2.3 - Create Colours
 - [x] Update README
 - [x] Commit all changes to Github repository
 
@@ -69,3 +75,34 @@ The application now has the ability to create new models, with all different pap
 The sprint overall was fairly brief. However, there were a couple of blockers I had to deal with. Firstly, my computer struggled to cope with some of the functionality I was putting it through. Secondly, I had rather a hard time completing User Story 1.1, as I just couldn't get it to work. However, after a while, I realised that I needed a constructor within my CRUD Manager class to initialize the properties I was trying to assign to.
 
 ![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint2.PNG)
+
+
+
+### Sprint 3 - Thursday 3rd December 2020
+
+By the end of this sprint I intended to have a fully functioning application, so that all that is left to do in the time remaining is to unit test and design the application to look more aesthetically pleasing. This included fully completing the model details window, which also allows updating and removing models. It also included removing orders from the owner's order view once they are completed. Finally, on the customer's side, I had to enable users to add items to the basket and the basket view will then be updated.
+
+#### Sprint Goals
+
+* Finish application functionality
+
+- [x] Complete User Story 3.1 - Save Models to Order
+- [x] Complete User Story 3.2 - Customer Basket View
+- [x] Complete User Story 2.2 - Model Details Owner View
+- [x] Complete User Story 1.2 - Delete Models (Owner)
+- [x] Complete User Story 1.3 - Update Models (Owner)
+- [x] Complete User Story 2.4 - Complete Orders Removal
+- [x] Complete User Story 0.5 - Deal with Exceptions
+- [x] Update README
+- [x] Add titles to README Sprints
+- [x] Add Class Diagram/ERD to README
+- [x] Commit all changes to Github repository
+
+#### Sprint Review
+
+#### Sprint Retrospective
+
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint3.PNG)
+
+
+

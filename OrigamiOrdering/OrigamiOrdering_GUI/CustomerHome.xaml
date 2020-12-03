@@ -6,6 +6,8 @@
       xmlns:local="clr-namespace:OrigamiOrdering_GUI"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      MinHeight="550" MinWidth="900"
+      MaxHeight="550" MaxWidth="900"
       Title="OriMagic - Customer Homepage">
 
     <Grid Margin="10,10,10,10">
@@ -17,14 +19,14 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnBuy" Content="Buy" HorizontalAlignment="Center" Margin="0,83,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnBuy_Click"/>
-        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,166,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click"/>
-        <ListView x:Name="lvModels" Grid.Column="1" Grid.RowSpan="2" MouseDoubleClick="lvModels_MouseDoubleClick">
+        <Button x:Name="btnBuy" Content="Buy" HorizontalAlignment="Center" Margin="0,66,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnBuy_Click" MouseDoubleClick="btnBuy_Click"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,149,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click"/>
+        <ListView x:Name="lvModels" Grid.RowSpan="2" MouseDoubleClick="lvModels_MouseDoubleClick" Grid.ColumnSpan="2" Margin="293,0,35,77">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Photo" DisplayMemberBinding="{Binding Photo}"/>
-                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding Names}"/>
-                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn x:Name="ModelPhoto" Header="Photo" DisplayMemberBinding="{Binding Photo}"/>
+                    <GridViewColumn x:Name="ModelName" Header="Model Name" DisplayMemberBinding="{Binding Names}"/>
+                    <GridViewColumn x:Name="ModelPrice" Header="Price" DisplayMemberBinding="{Binding Price}"/>
                 </GridView>
             </ListView.View>
         </ListView>

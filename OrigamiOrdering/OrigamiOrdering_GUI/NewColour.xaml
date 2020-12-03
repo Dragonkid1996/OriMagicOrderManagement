@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrigamiOrdering_GUI"
         mc:Ignorable="d"
-        Title="Add New Colour" Height="150" Width="300">
+        Title="Add New Colour" Height="200" Width="400"
+        MinHeight="200" MinWidth="400"
+      MaxHeight="200" MaxWidth="400">
     <Grid>
         <Label x:Name="label" Content="Colour Name: " HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbColour" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" Margin="115,28,0,0" Text="" TextWrapping="Wrap" Width="175" Height="26"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Top" Height="27" Width="78" Click="btnSubmit_Click"/>
-
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Top" Height="27" Width="78" Click="btnSubmit_Click" MouseDoubleClick="btnSubmit_Click"/>
     </Grid>
 </Window>
