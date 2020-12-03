@@ -7,13 +7,13 @@ The application will provide an interface for an origami shop owner to sell thei
 
 ## Class Diagrams
 ---
-![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OverallClassDiagram.PNG)
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OverallClassDiagram.png)
 
 ## Entity Relationship Diagram
 
 ---
 
-![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OrigamiDB ERD.jpg)
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OrigamiERD.jpg)
 
 ## WPF
 
