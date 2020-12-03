@@ -5,6 +5,17 @@
 ### Application Description:
 The application will provide an interface for an origami shop owner to sell their products. They will be able to create new models with high levels of detail, including model complexity and number of units, colours needed, etc. They will also be able to remove models which are no longer sold, and modify models to make changes as well. A buyer interface for the application will also be created to allow buyers to peruse the models being sold and add them to a basket. When an order is placed, it will show in the shop owner view.
 
+### Project Goals:
+
+* The project will emulate the development of software using Agile methodologies.
+* The application must have:
+     * Graphical User Interface frontend 
+     * Database backend
+     * Business layer to connect the two 
+     * The business layer must be fully tested
+* The application must be well documented.
+* A final project presentation must also be given.
+
 ## Class Diagrams
 ---
 ![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OverallClassDiagram.png)
@@ -100,7 +111,11 @@ By the end of this sprint I intended to have a fully functioning application, so
 
 #### Sprint Review
 
+The application now works as expected, and does not crash due to unhandled exceptions. It is at a point where it can take new orders from a customer, remove orders once they are completed, create new models, update and remove models if needs be, and view model details so that the owner can view at any time. They can also insert new colours into the database, and use them when creating new models.
+
 #### Sprint Retrospective
+
+The sprint went really smoothly, as I managed to finish everything I needed to on time, including handling exceptions, which I originally hadn't expected to fit into the sprint. The only blocker I had was that I kept adding new user stories to my day, as I was finished with the user stories I had set, and kept finding new features that I hadn't originally thought of when planning the project.
 
 ![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint3.PNG)
 

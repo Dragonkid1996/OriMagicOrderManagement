@@ -30,7 +30,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListBox x:Name="lbBasket" Margin="0,0,10,0"/>
+        <ListBox x:Name="lbBasket" Margin="0,0,10,0" MouseDoubleClick="lbBasket_MouseDoubleClick"/>
         <Label x:Name="lblPrice" Content="" HorizontalAlignment="Left" Margin="145,27,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>

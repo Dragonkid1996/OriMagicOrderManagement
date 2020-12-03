@@ -183,5 +183,11 @@ namespace OrigamiOrdering
             }
             return sum;
         }
+
+        public void RemoveFromBasket(string modelToRemove)
+        {
+            var removal = Basket.Where(b => b.ModelName == modelToRemove).FirstOrDefault();
+            Basket.Remove(removal);
+        }
     }
 }

@@ -92,5 +92,19 @@ namespace OrigamiOrdering_GUI
                 MessageBox.Show("Please enter a number!");
             MessageBox.Show("Order has been placed!");
         }
+
+        private void lbBasket_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                _crudManager.RemoveFromBasket(lbBasket.SelectedItem.ToString());
+                RefreshBasket();
+            }
+            catch (Exception) 
+            {
+                //Left blank intentionally, as the program won't crash on double clicking
+                //without selecting an item
+            }
+        }
     }
 }
