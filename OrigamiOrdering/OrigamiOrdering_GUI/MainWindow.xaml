@@ -8,5 +8,6 @@
         Title="OriMagic" Height="550" Width="900" 
         MinHeight="550" MinWidth="900"
         MaxHeight="550" MaxWidth="900"
+        WindowStartupLocation="CenterScreen"
         Source="OriMagicHome.xaml">
 </NavigationWindow>

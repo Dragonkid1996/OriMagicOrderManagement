@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Add New Colour" Height="200" Width="400"
         MinHeight="200" MinWidth="400"
-      MaxHeight="200" MaxWidth="400">
+        MaxHeight="200" MaxWidth="400"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="label" Content="Colour Name: " HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbColour" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" Margin="115,28,0,0" Text="" TextWrapping="Wrap" Width="175" Height="26"/>

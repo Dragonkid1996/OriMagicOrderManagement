@@ -41,7 +41,7 @@ namespace OrigamiOrdering_GUI
             var modelList = _crudManager.GetAllModels();
             foreach (var item in modelList)
             {
-                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Names = item.ModelName, Price = item.ModelPrice });
+                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Names = item.ModelName, Price = item.ModelPrice.ToString("C") });
             }
         }
 

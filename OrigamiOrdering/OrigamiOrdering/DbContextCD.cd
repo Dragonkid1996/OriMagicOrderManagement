@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OrigamiOrdering.Colour">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAIAACAA=</HashCode>
+      <FileName>Colour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrigamiOrdering.JtModelColour">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <AssociationLine Name="Colour" Type="OrigamiOrdering.Colour">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.454" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Model" Type="OrigamiOrdering.Model">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.391" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAAJABAAA=</HashCode>
+      <FileName>JtModelColour.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Colour" />
+      <Property Name="Model" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OrigamiOrdering.Model">
+    <Position X="2" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABAAAAAAAAAAAAAAiIAAgAAAAIAQAAAAAAgAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrigamiOrdering.Order">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Model" Type="OrigamiOrdering.Model">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.37" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>GAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OrigamiOrdering.origamiContext">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQAQAAAAAAAAAAAAEAAAACAQAAgAAAAAAAA=</HashCode>
+      <FileName>origamiContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

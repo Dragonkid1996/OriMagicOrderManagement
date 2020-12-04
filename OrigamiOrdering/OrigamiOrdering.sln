@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrigamiOrdering_Business", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrigamiOrdering_TEST", "OrigamiOrdering_TEST\OrigamiOrdering_TEST.csproj", "{5B586C56-3852-477E-BDEE-62091420FB97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering", "OrigamiOrdering\OrigamiOrdering.csproj", "{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigamiOrdering", "OrigamiOrdering\OrigamiOrdering.csproj", "{CA97D599-1F23-447B-9744-1ADD75301E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B586C56-3852-477E-BDEE-62091420FB97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C72C43B4-6DD9-42D8-B9AE-354C17B2A29C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA97D599-1F23-447B-9744-1ADD75301E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA97D599-1F23-447B-9744-1ADD75301E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA97D599-1F23-447B-9744-1ADD75301E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA97D599-1F23-447B-9744-1ADD75301E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

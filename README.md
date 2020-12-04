@@ -121,3 +121,26 @@ The sprint went really smoothly, as I managed to finish everything I needed to o
 
 
 
+### Sprint 4 - Friday 4th December 2020
+
+By the end of this sprint I intended to have finished unit testing the various methods within the business layer of the application. I also intended to make the application as user friendly as possible, labelling the various lists as the orders, models or basket.
+
+#### Sprint Goals
+
+* Finish Testing and work on presentation
+  - [x] Complete User Story 0.4 - Testing
+  - [x] Complete User Story 4.1 - Make it simple
+  - [x] Complete User Story 0.6 - Prepare for Presentation
+  - [x] Update README
+  - [x] Commit all changes to Github repository
+
+#### Sprint Review
+
+The application still works as it should, and now has been optimised for user experience. This includes placing helpful labels around the various windows, and formatting some items within the lists. For example, the GUI now displays all prices as currency, rather than just the number. Testing has been completed and all works as expected, bar one test. This test fails, although it passes when done manually.
+
+#### Sprint Retrospective
+
+The sprint went well, as all necessary user stories were completed on time. The only blocker I encountered was the test which just would not pass. I have overlooked this for now, as the manual testing does show that the model update method works as it should.
+
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint4.PNG)
+

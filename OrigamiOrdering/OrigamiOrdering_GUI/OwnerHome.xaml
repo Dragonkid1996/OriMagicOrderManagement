@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="btnCreate" Content="New Model" HorizontalAlignment="Center" VerticalAlignment="Center" Height="38" Width="100" Click="btnCreate_Click" MouseDoubleClick="btnCreate_Click"/>
         <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click" Grid.Row="1"/>
-        <ListView x:Name="lvModels" Margin="293,0,49,10" MouseDoubleClick="lvModels_MouseDoubleClick" Grid.ColumnSpan="2">
+        <ListView x:Name="lvModels" Margin="293,29,49,34" MouseDoubleClick="lvModels_MouseDoubleClick" Grid.ColumnSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Photo" DisplayMemberBinding="{Binding Photo}"/>
@@ -32,11 +32,14 @@
         <ListView x:Name="lvOrders" Grid.Row="1" MouseDoubleClick="lvOrders_MouseDoubleClick" Grid.ColumnSpan="2" Margin="293,0,49,87">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="OrderID" DisplayMemberBinding="{Binding ID}" Width="100"/>
+                    <GridViewColumn Header="OrderID" DisplayMemberBinding="{Binding ID}" Width="0"/>
+                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding ModelName}" Width="100"/>
                     <GridViewColumn Header="Total Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
                     <GridViewColumn Header="Order Date" DisplayMemberBinding="{Binding Date}" Width="200"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label x:Name="label" Content="Models" Grid.Column="1" HorizontalAlignment="Left" Margin="4,2,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Orders" Grid.Column="1" HorizontalAlignment="Left" Margin="4,236,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

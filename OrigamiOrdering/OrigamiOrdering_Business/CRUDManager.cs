@@ -34,7 +34,10 @@ namespace OrigamiOrdering
         {
             using (var db = new origamiContext())
             {
-                return db.Orders.ToList();
+                var orderWithModel =
+                    (from o in db.Orders.Include(o => o.Model)
+                    select o).ToList();
+                return orderWithModel;
             }
         }
 

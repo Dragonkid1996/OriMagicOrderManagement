@@ -56,7 +56,7 @@ namespace OrigamiOrdering_GUI
             var orders = _crudManager.GetAllOrders();
             foreach (var item in orders)
             {
-                this.lvOrders.Items.Add(new { ID = item.OrderId, Price = item.TotalPrice, Date = item.OrderDate });
+                this.lvOrders.Items.Add(new { ID = item.OrderId, ModelName =  item.Model.ModelName, Price = item.TotalPrice.ToString("C"), Date = item.OrderDate });
             }
         }
 

@@ -111,9 +111,9 @@ namespace OrigamiOrdering
                 entity.Property(e => e.ModelId).HasColumnName("ModelID");
 
                 entity.Property(e => e.OrderDate)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("Order_Date")
-                    .HasDefaultValueSql("(getdate())");
+                    .HasDefaultValueSql("(sysdatetime())");
 
                 entity.Property(e => e.TotalPrice)
                     .HasColumnType("decimal(18, 0)")

@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="ModelDetails" Height="550" Width="900"
         MinHeight="550" MinWidth="900"
-        MaxHeight="550" MaxWidth="900">
+        MaxHeight="550" MaxWidth="900"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="lblName" Content="Model Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,65,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbName" Text="" TextWrapping="Wrap" Margin="214,58,88,424" IsEnabled="False"/>
