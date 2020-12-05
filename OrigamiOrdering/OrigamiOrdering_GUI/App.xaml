@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:OrigamiOrdering_GUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="IndianRed"/>
+            <Setter Property="FontFamily" Value="Lucida Calligraphy"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="BorderBrush" Value="White"/>
+        </Style>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontFamily" Value="Lucida Calligraphy"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
     </Application.Resources>
 </Application>

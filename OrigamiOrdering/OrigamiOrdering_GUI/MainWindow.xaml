@@ -9,5 +9,4 @@
         MinHeight="550" MinWidth="900"
         MaxHeight="550" MaxWidth="900"
         WindowStartupLocation="CenterScreen"
-        Source="OriMagicHome.xaml">
-</NavigationWindow>
+        Source="OriMagicHome.xaml" BorderBrush="IndianRed" BorderThickness="1,0,1,1" WindowStyle="ThreeDBorderWindow" Icon="/Orimagic Short.jpg" ResizeMode="CanMinimize" ShowsNavigationUI="False"/>

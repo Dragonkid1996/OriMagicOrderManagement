@@ -4,7 +4,19 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>orimagic_short_p40_icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+    <Page Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Orimagic Short.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
@@ -18,6 +30,10 @@
   <ItemGroup>
     <ProjectReference Include="..\OrigamiOrdering\OrigamiOrdering.csproj" />
     <ProjectReference Include="..\OrigamiOrdering_Business\OrigamiOrdering_Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Orimagic Short.jpg" />
   </ItemGroup>
 
 </Project>

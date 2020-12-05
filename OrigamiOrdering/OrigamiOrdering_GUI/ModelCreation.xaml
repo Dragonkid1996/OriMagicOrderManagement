@@ -19,24 +19,24 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="23,143,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="163,142,0,0" VerticalAlignment="Top" Height="40" Width="100" Click="btnBack_Click" MouseDoubleClick="btnBack_Click" Grid.Row="1"/>
-        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="100" Click="btnCreate_Click" MouseDoubleClick="btnCreate_Click" Margin="163,80,0,0"/>
-        <Label x:Name="lblName" Content="Model Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,65,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" Text="" TextWrapping="Wrap" Margin="214,65,88,174" Grid.Column="1"/>
-        <Label x:Name="lblPrice" Content="Price: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,109,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbPrice" Text="" TextWrapping="Wrap" Margin="214,108,88,130" Grid.Column="1"/>
-        <Label x:Name="lblComplex" Content="Complexity: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,152,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbComplexity" Text="" TextWrapping="Wrap" Margin="214,151,88,87" Grid.Column="1"/>
-        <Label x:Name="lblPieces" Content="Total Number of Pieces: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,194,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <TextBox x:Name="tbPieces" Text="0" TextWrapping="Wrap" Margin="214,194,88,45" Grid.Column="1" IsEnabled="False"/>
-        <Label x:Name="lblTutorialLink" Content="Tutorial Link: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,22,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox x:Name="tbTutorial" Text="" TextWrapping="Wrap" Margin="214,21,88,217" Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="lblPhotoLink" Content="Link to Photo: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox x:Name="tbPhoto" Text="" TextWrapping="Wrap" Margin="214,64,88,173" Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="lblTitle" Content="Model Creation" Grid.Column="1" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="23,143,0,0" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="163,142,0,0" VerticalAlignment="Top" Height="40" Width="100" Click="btnBack_Click" MouseDoubleClick="btnBack_Click" Grid.Row="1" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="100" Click="btnCreate_Click" MouseDoubleClick="btnCreate_Click" Margin="163,80,0,0" Style="{StaticResource ButtonStyle}"/>
+        <Label x:Name="lblName" Content="Model Name: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,65,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbName" Text="" TextWrapping="Wrap" Margin="294,65,88,174" Grid.Column="1"/>
+        <Label x:Name="lblPrice" Content="Price: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,109,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbPrice" Text="" TextWrapping="Wrap" Margin="294,108,88,130" Grid.Column="1"/>
+        <Label x:Name="lblComplex" Content="Complexity: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,152,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbComplexity" Text="" TextWrapping="Wrap" Margin="294,151,88,87" Grid.Column="1"/>
+        <Label x:Name="lblPieces" Content="Total Number of Pieces: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,194,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbPieces" Text="0" TextWrapping="Wrap" Margin="294,194,88,45" Grid.Column="1" IsEnabled="False"/>
+        <Label x:Name="lblTutorialLink" Content="Tutorial Link: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,22,0,0" VerticalAlignment="Top" Grid.Row="1" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbTutorial" Text="" TextWrapping="Wrap" Margin="294,21,88,217" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="lblPhotoLink" Content="Link to Photo: " Grid.Column="1" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" Grid.Row="1" Style="{StaticResource LabelStyle}"/>
+        <TextBox x:Name="tbPhoto" Text="" TextWrapping="Wrap" Margin="294,64,88,173" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="lblTitle" Content="Model Creation" Grid.Column="1" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
         <ListBox x:Name="lbColours" Margin="0,0,10,0" MouseDoubleClick="lbColours_MouseDoubleClick"/>
-        <Button x:Name="btnColour" Content="New Colour" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="100" Click="btnColour_Click" MouseDoubleClick="btnColour_Click" Margin="23,80,0,0"/>
+        <Button x:Name="btnColour" Content="New Colour" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="39" Width="124" Click="btnColour_Click" MouseDoubleClick="btnColour_Click" Margin="12,80,0,0" Style="{StaticResource ButtonStyle}"/>
         <Label x:Name="label" Content="Number of Pieces:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Visibility="Hidden"/>
         <TextBox x:Name="tbPieceNo" HorizontalAlignment="Left" Margin="150,14,0,0" Grid.Row="1" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Visibility="Hidden"/>
         <Button x:Name="btnSubmitPieces" Content="Submit" HorizontalAlignment="Left" Margin="80,49,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="90" Visibility="Hidden" Click="btnSubmitPieces_Click" MouseDoubleClick="btnSubmitPieces_Click"/>

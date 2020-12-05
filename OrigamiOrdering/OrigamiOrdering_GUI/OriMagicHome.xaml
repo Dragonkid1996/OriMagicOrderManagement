@@ -20,7 +20,9 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnOwner" Content="Owner" HorizontalAlignment="Left" Margin="123,199,0,0" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="134" Click="btnOwner_Click" MouseDoubleClick="btnOwner_Click"/>
-        <Button x:Name="btnCustomer" Content="Customer" HorizontalAlignment="Left" Margin="10,199,0,0" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="134" Grid.Column="2" Click="btnCustomer_Click" MouseDoubleClick="btnCustomer_Click"/>
+        <Button x:Name="btnOwner" Content="Owner" HorizontalAlignment="Left" Margin="0,358,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="109" Click="btnOwner_Click" MouseDoubleClick="btnOwner_Click" Grid.Column="1" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btnCustomer" Content="Customer" HorizontalAlignment="Left" Margin="191,358,0,0" Grid.Row="1" VerticalAlignment="Top" Height="44" Width="109" Grid.Column="1" Click="btnCustomer_Click" MouseDoubleClick="btnCustomer_Click" Style="{StaticResource ButtonStyle}"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="268" Margin="184,43,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="536" Grid.ColumnSpan="3" Source="D:\SpartaGlobal\Origami Order System\OriMagicOrderManagement\OrigamiOrdering\OrigamiOrdering_GUI\OrigamiImages\Orimagic.jpg"/>
+        <Label x:Name="label" Content="Please select an option" Grid.Column="1" HorizontalAlignment="Center" Margin="0,323,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
     </Grid>
 </Page>

@@ -35,6 +35,7 @@ namespace OrigamiOrdering_GUI
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             btnDelete.Visibility = Visibility.Hidden;
+            btnUpdate.Visibility = Visibility.Hidden;
             btnSubmit.Visibility = Visibility.Visible;
             tbPrice.IsEnabled = true;
             tbComplexity.IsEnabled = true;
@@ -55,11 +56,11 @@ namespace OrigamiOrdering_GUI
                     var selectColours =
                         from jt in db.JtModelColours.Include(jt => jt.Colour)
                         where jt.ModelId == idToInt
-                        select new { Colour = jt.Colour.Colour1, Pieces = jt.PiecesOfColour };
+                        select new {ID = jt.IndexId, Colour = jt.Colour.Colour1, Pieces = jt.PiecesOfColour };
 
                     foreach (var item in selectColours)
                     {
-                        lvColours.Items.Add(new { ColourName = item.Colour, PiecesNo = item.Pieces });
+                        lvColours.Items.Add(new {ID = item.ID, ColourName = item.Colour, PiecesNo = item.Pieces });
                     }
                 }
             }                        
@@ -86,6 +87,11 @@ namespace OrigamiOrdering_GUI
                 this.Close();
             }
             
+        }
+
+        private void tbTutorial_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

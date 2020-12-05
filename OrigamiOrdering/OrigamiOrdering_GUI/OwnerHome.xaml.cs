@@ -46,7 +46,7 @@ namespace OrigamiOrdering_GUI
             var modelList = _crudManager.GetAllModels();
             foreach (var item in modelList)
             {
-                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Name = item.ModelName });
+                this.lvModels.Items.Add(new { Photo = @"D:\SpartaGlobal\Origami Order System\OriMagicOrderManagement\OrigamiOrdering\OrigamiOrdering_GUI\OrigamiImages\" + item.LinkToPhoto, Name = item.ModelName });
             } 
         }
 
@@ -68,8 +68,14 @@ namespace OrigamiOrdering_GUI
                 var onlyModel = modelChosen[1].Split('=');
                 var modelName = onlyModel[1].Trim();
                 modelName = modelName.Remove(modelName.Length - 2, 2);
-            
                 var model = _crudManager.GetModelFromName(modelName);
+                
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.UriSource = new Uri(@"D:\SpartaGlobal\Origami Order System\OriMagicOrderManagement\OrigamiOrdering\OrigamiOrdering_GUI\OrigamiImages\" + model.LinkToPhoto);
+                bi.EndInit();
+            
+                
                 ModelDetails modelDetails = new ModelDetails();
                 modelDetails.lblId.Content = model.ModelId.ToString();
                 modelDetails.tbName.Text = model.ModelName;
@@ -78,6 +84,7 @@ namespace OrigamiOrdering_GUI
                 modelDetails.tbPieces.Text = model.ModelPiecesNumber.ToString();
                 modelDetails.tbPhoto.Text = model.LinkToPhoto;
                 modelDetails.tbTutorial.Text = model.LinkToTutorial;
+                modelDetails.imgModel.Source = bi;
                 modelDetails.RefreshColours();
                 modelDetails.ShowDialog();
                 RefreshModels();

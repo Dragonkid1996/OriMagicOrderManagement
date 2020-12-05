@@ -29,7 +29,15 @@ The application will provide an interface for an origami shop owner to sell thei
 ## WPF
 
 ---
-[image]
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/HomeScreen.PNG)
+
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/CustomerScreen.PNG)
+
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/OwnerScreen.PNG)
+
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/NewModelScreen.PNG)
+
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ModelDetailsScreen.PNG)
 
 ## Sprint Breakdowns
 ---
@@ -144,3 +152,30 @@ The sprint went well, as all necessary user stories were completed on time. The 
 
 ![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint4.PNG)
 
+
+
+### Sprint 5 - Saturday 5th December 2020
+
+By the end of this sprint I intended to have a completely finished, tested and aesthetically pleasing application, to the extent where the store owner would be happy using it.
+
+#### Sprint Goals
+
+* Finish application with aesthetics
+- [x] Complete User Story 0.3 - Make it pretty
+- [x] Complete User Story 0.3.1- Make it pretty - Use Images
+- [x] Update README
+- [x] Commit all changes to Github repository
+
+#### Sprint Review
+
+The application still works as it should, has been fully tested, and looks the part as well. It is now at the point where it fits the project application description.
+
+#### Sprint Retrospective
+
+This sprint was pretty short, as I didn't have too much left to do. I have now finished the application as much as was within the project scope. There were no blockers.
+
+![image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/ProjectBoardSprint5.PNG)
+
+
+
+### Project Retrospective

@@ -41,7 +41,7 @@ namespace OrigamiOrdering_GUI
             var modelList = _crudManager.GetAllModels();
             foreach (var item in modelList)
             {
-                this.lvModels.Items.Add(new { Photo = item.LinkToPhoto, Names = item.ModelName, Price = item.ModelPrice.ToString("C") });
+                this.lvModels.Items.Add(new { Photo = @"D:\SpartaGlobal\Origami Order System\OriMagicOrderManagement\OrigamiOrdering\OrigamiOrdering_GUI\OrigamiImages\" + item.LinkToPhoto, Names = item.ModelName, Price = item.ModelPrice.ToString("C") });
             }
         }
 
@@ -54,15 +54,6 @@ namespace OrigamiOrdering_GUI
                 lbBasket.Items.Add(item.ModelName);
             }
             lblPrice.Content = _crudManager.GetTotalPrice().ToString("F");
-        }
-
-        public BitmapImage LoadImage(string fileName)
-        {
-            var source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + @"..\..\..\..\..\OrigamiImages/" + fileName));
-            source.DecodePixelHeight = 100;
-            source.DecodePixelWidth = 100;
-
-            return source;
         }
 
         private void lvModels_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -86,11 +77,16 @@ namespace OrigamiOrdering_GUI
         private void btnBuy_Click(object sender, RoutedEventArgs e)
         {
             bool isDec = Decimal.TryParse(lblPrice.Content.ToString(), out decimal result);
-            if (isDec)
+            if (isDec && result != 0m)
+            {
                 _crudManager.CreateOrder(_crudManager.Basket, result);
+                MessageBox.Show("Order has been placed!");
+            }
+            else if (isDec && result == 0m)
+                MessageBox.Show("No order to place");
             else
                 MessageBox.Show("Please enter a number!");
-            MessageBox.Show("Order has been placed!");
+            
         }
 
         private void lbBasket_MouseDoubleClick(object sender, MouseButtonEventArgs e)

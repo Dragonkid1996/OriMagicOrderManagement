@@ -19,13 +19,19 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCreate" Content="New Model" HorizontalAlignment="Center" VerticalAlignment="Center" Height="38" Width="100" Click="btnCreate_Click" MouseDoubleClick="btnCreate_Click"/>
-        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click" Grid.Row="1"/>
+        <Button x:Name="btnCreate" Content="New Model" HorizontalAlignment="Center" VerticalAlignment="Center" Height="38" Width="163" Click="btnCreate_Click" MouseDoubleClick="btnCreate_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Height="39" Width="100" Click="btnHome_Click" MouseDoubleClick="btnHome_Click" Grid.Row="1" Style="{StaticResource ButtonStyle}"/>
         <ListView x:Name="lvModels" Margin="293,29,49,34" MouseDoubleClick="lvModels_MouseDoubleClick" Grid.ColumnSpan="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Photo" DisplayMemberBinding="{Binding Photo}"/>
-                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Photo" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Photo}" Width="75" Height="75"></Image>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Model Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -39,7 +45,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="label" Content="Models" Grid.Column="1" HorizontalAlignment="Left" Margin="4,2,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Orders" Grid.Column="1" HorizontalAlignment="Left" Margin="4,236,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Models - Double Click to View Details" Grid.Column="1" HorizontalAlignment="Left" Margin="4,2,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
+        <Label x:Name="label2" Content="Orders - Double Click to Complete" Grid.Column="1" HorizontalAlignment="Left" Margin="4,236,0,0" VerticalAlignment="Top" Style="{StaticResource LabelStyle}"/>
     </Grid>
 </Page>
