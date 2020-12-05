@@ -29,7 +29,7 @@ The application will provide an interface for an origami shop owner to sell thei
 ## WPF
 
 ---
-![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/HomeScreen.PNG)
+![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/Homescreen.PNG)
 
 ![Image](https://github.com/Dragonkid1996/OriMagicOrderManagement/blob/main/ProjectImages/CustomerScreen.PNG)
 
