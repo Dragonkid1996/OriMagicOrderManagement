@@ -46,10 +46,15 @@ namespace OrigamiOrdering_GUI
                 MessageBox.Show("Please enter a valid number of pieces (Integer)!");
             else
             {
-                _crudManager.CreateModel(tbName.Text, resultPrice, tbComplexity.Text,
+                if (tbPhoto.Text.Contains(".jpg") || tbPhoto.Text.Contains(".png"))
+                {
+                    _crudManager.CreateModel(tbName.Text, resultPrice, tbComplexity.Text,
                                          resultPieces, tbTutorial.Text, tbPhoto.Text);
-                _crudManager.ColoursForModel(_crudManager.ColoursList, tbName.Text, _crudManager.PiecesList);
-                MessageBox.Show("Model has been created!");
+                    _crudManager.ColoursForModel(_crudManager.ColoursList, tbName.Text, _crudManager.PiecesList);
+                    MessageBox.Show("Model has been created!");
+                }
+                else
+                    MessageBox.Show("Photo must be .png or .jpg");
             }
             
         }

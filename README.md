@@ -179,3 +179,5 @@ This sprint was pretty short, as I didn't have too much left to do. I have now f
 
 
 ### Project Retrospective
+
+Throughout this project, I have learned much, mostly within the WPF layer of the application. I feel the project as a whole ran smoothly, though there were a couple of hurdles along the way. To improve the application, I plan on adding a search box to find models more efficiently. I also would like to change the handling of order completion. Currently, the order is deleted once it is completed; however, I would like to mark them as completed in the database. I can then choose whether or not to show completed orders within the listview using a checkbox.
